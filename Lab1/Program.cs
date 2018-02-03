@@ -1,10 +1,10 @@
-﻿using Lab1.Models;
-using System;
+﻿using System;
+using Lab1.Models;
 using TimeSpanLib;
 
 namespace Lab1
 {
-    internal class Program
+    internal static class Program
     {
         private static void Main(string[] args)
         {
@@ -20,9 +20,9 @@ namespace Lab1
 
             var timeSpanHelper = new TimeSpanHelper();
 
-            DateTime startDate = DateTime.Now;
+            var startDate = DateTime.Now;
             analizator.SaveSortedList("output.txt");
-            DateTime endDate = DateTime.Now;
+            var endDate = DateTime.Now;
 
             var timeSpan = timeSpanHelper.CalculateTimeSpan(startDate, endDate);
             Console.WriteLine("Czas zapisu: ");

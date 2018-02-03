@@ -1,7 +1,6 @@
-﻿using Lab1.Interfaces;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
+using Lab1.Interfaces;
 
 namespace Lab1.Models
 {
@@ -11,15 +10,13 @@ namespace Lab1.Models
 
         public List<double> GetData()
         {
-            List<double> list = new List<double>();
+            var list = new List<double>();
 
             using (var reader = new StreamReader(FileName))
             {
-                while (reader.Peek() >= 0)
-                {
-                    list.Add(Double.Parse(reader.ReadLine()));
-                }
+                while (reader.Peek() >= 0) list.Add(double.Parse(reader.ReadLine()));
             }
+
             return list;
         }
 

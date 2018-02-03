@@ -1,6 +1,6 @@
-﻿using Lab1.Interfaces;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using Lab1.Interfaces;
 
 namespace Lab1.Models
 {
@@ -13,10 +13,7 @@ namespace Lab1.Models
             var rnd = new Random();
             var list = new List<double>();
 
-            for (int i = 0; i < Count; i++)
-            {
-                list.Add(rnd.NextDouble() * (1 - 0) + 0);
-            }
+            for (var i = 0; i < Count; i++) list.Add(rnd.NextDouble() * (1 - 0) + 0);
             return list;
         }
 
